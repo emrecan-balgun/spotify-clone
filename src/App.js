@@ -1,15 +1,22 @@
 import Sidebar from 'components/Sidebar';
 import BottomBar from 'components/BottomBar';
 import Content from 'components/Content';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from "react-router-dom";
 
 function App() {
   return (
     <>
-      <div className="wrapper">
-        <Sidebar />
-        <Content />
-      </div>
-      <BottomBar />
+      <BrowserRouter>
+        <div className="wrapper">
+          <Sidebar />
+          <Content />
+        </div>
+        <BottomBar />
+      </BrowserRouter>
     </>
   );
 }
