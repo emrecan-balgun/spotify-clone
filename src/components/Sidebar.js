@@ -2,6 +2,7 @@ import logo from 'img/logo.svg';
 import { Icon } from 'Icons';
 import Menu from './Sidebar/Menu';
 import Playlists from './Sidebar/Playlists';
+import DownloadApp from './Sidebar/DownloadApp';
 
 function Sidebar() {
   return (
@@ -31,6 +32,7 @@ function Sidebar() {
         </ul>
       </nav>
       <Playlists />
+      <DownloadApp />
     </aside>
   )
 }
