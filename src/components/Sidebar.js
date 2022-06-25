@@ -1,10 +1,11 @@
 import logo from 'img/logo.svg';
-import Menu from './Sidebar/Menu';
 import { Icon } from 'Icons';
+import Menu from './Sidebar/Menu';
+import Playlists from './Sidebar/Playlists';
 
 function Sidebar() {
   return (
-    <aside className="w-60 py-6 flex flex-col bg-black">
+    <aside className="w-60 pt-6 flex flex-col bg-black">
       <a href="#" className="mb-7 px-6">
         <img src={logo} className="h-10" alt="" />
       </a>
@@ -29,6 +30,7 @@ function Sidebar() {
           </li>
         </ul>
       </nav>
+      <Playlists />
     </aside>
   )
 }
