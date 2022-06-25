@@ -42,7 +42,7 @@ const SearchActiveIcon = ({ size }) => {
 }
 
 
-const LibraryIcon = ({ size }) => {
+const CollectionIcon = ({ size }) => {
     return (
     <svg role="img" height={size} width={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path 
@@ -52,7 +52,7 @@ const LibraryIcon = ({ size }) => {
     )
 }
 
-const LibraryActiveIcon = ({ size }) => {
+const CollectionActiveIcon = ({ size }) => {
     return (
     <svg role="img" height={size} width={size} viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
         <path 
@@ -68,8 +68,8 @@ const Icon = ({ name, size = 24 }) => {
         homeActive: HomeActiveIcon,
         search: SearchIcon,
         searchActive: SearchActiveIcon,
-        library: LibraryIcon,
-        libraryActive: LibraryActiveIcon
+        collection: CollectionIcon,
+        collectionActive: CollectionActiveIcon
     }
 
     const Component = icons[name]
