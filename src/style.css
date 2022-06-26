@@ -622,6 +622,10 @@ html,  body,  #root {
   width: 1.5rem;
 }
 
+.w-8 {
+  width: 2rem;
+}
+
 .flex-auto {
   flex: 1 1 auto;
 }
@@ -663,6 +667,10 @@ html,  body,  #root {
   border-radius: 0.25rem;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .border-t {
   border-top-width: 1px;
 }
@@ -697,6 +705,10 @@ html,  body,  #root {
 
 .bg-opacity-60 {
   --tw-bg-opacity: 0.6;
+}
+
+.bg-opacity-70 {
+  --tw-bg-opacity: 0.7;
 }
 
 .bg-gradient-to-br {
