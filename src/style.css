@@ -610,6 +610,10 @@ html,  body,  #root {
   height: 2rem;
 }
 
+.h-\[3\.7rem\] {
+  height: 3.7rem;
+}
+
 .w-60 {
   width: 15rem;
 }
@@ -636,6 +640,10 @@ html,  body,  #root {
 
 .justify-center {
   justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
 }
 
 .gap-x-4 {
@@ -723,6 +731,11 @@ html,  body,  #root {
 .px-4 {
   padding-left: 1rem;
   padding-right: 1rem;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .pt-6 {

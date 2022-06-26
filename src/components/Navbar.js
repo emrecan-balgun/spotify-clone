@@ -1,9 +1,11 @@
-import { Routes, Route } from "react-router-dom";
+import Navigation from "./Navbar/Navigation"
+import Auth from "./Navbar/Auth"
 
 function Navbar() {
   return (
-    <nav>
-        Navbar
+    <nav className="h-[3.7rem] flex items-center justify-between px-8">
+        <Navigation />
+        <Auth />
     </nav>
   )
 }
