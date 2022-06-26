@@ -15,7 +15,7 @@ function Menu() {
                 <NavLink exact to={"/"}>
                     {({ isActive }) => (
                         <span style={isActive ? activeStyle : undefined} className="h-10 flex gap-x-4 items-center text-sm font-semibold text-link rounded hover:text-white px-4">
-                            { isActive ? <Icon name="homeActive" /> : <Icon name="home" /> }
+                            <Icon name={isActive ? "homeActive" : "home"} />
                             Ana sayfa
                         </span>
                     )}
@@ -25,7 +25,7 @@ function Menu() {
                 <NavLink exact to={"/search"}>
                     {({ isActive }) => (
                         <span style={isActive ? activeStyle : undefined} className="h-10 flex gap-x-4 items-center text-sm font-semibold text-link rounded hover:text-white px-4">
-                            { isActive ? <Icon name="searchActive" /> : <Icon name="search" /> }
+                            <Icon name={isActive ? "searchActive" : "search"} />
                             Ara
                         </span>
                     )}
@@ -35,7 +35,7 @@ function Menu() {
                 <NavLink exact to={"/collection"}>
                     {({ isActive }) => (
                         <span style={isActive ? activeStyle : undefined} className="h-10 flex gap-x-4 items-center text-sm font-semibold text-link rounded hover:text-white px-4">
-                            { isActive ? <Icon name="collectionActive" /> : <Icon name="collection" /> }
+                            <Icon name={isActive ? "collectionActive" : "collection"} />
                             Kitaplığın
                         </span>
                     )}
