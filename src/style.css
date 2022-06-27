@@ -986,6 +986,10 @@ html,  body,  #root {
   font-size: 0.813rem;
 }
 
+.text-\[0\.688rem\] {
+  font-size: 0.688rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
