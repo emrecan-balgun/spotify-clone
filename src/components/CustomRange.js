@@ -1,5 +1,3 @@
-
-import { useState } from "react";
 import { Range, getTrackBackground } from "react-range";
 
 function CustomRange({ value, step, min, max, onChange }) {
