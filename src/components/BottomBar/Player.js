@@ -39,9 +39,33 @@ function Player() {
   return (
     <div className="flex px-4 justify-between items-center h-full">
         <div className="min-w-[11.25rem] w-[30%]">
-            sol
+            {
+                current && (
+                    <div className="flex items-center">
+                        <div className="flex items-center mr-3">
+                            <div className="w-14 h-14 mr-3 relative group flex-shrink-0">
+                                <img src={current.image} alt="" />
+                                <button className="w-6 h-6 bg-black rotate-90 opacity-0 group-hover:opacity-60 hover:!opacity-100 hover:scale-[1.06] rounded-full absolute top-1 right-1 flex items-center justify-center">
+                                    <Icon size={16} name="arrowLeft" />
+                                </button>
+                            </div>
+                            <div>
+                                <h6 className="text-sm line-clamp-1">{current.title}</h6>
+                                <p className="text-[0.688rem] text-white text-opacity-70">{current.artist}</p>
+                            </div>
+                        </div>
+                            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+                                <Icon size={16} name="heart" />
+                            </button>
+                            <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
+                                <Icon size={16} name="pictureInPicture" />
+                            </button>
+                    </div>
+                    
+                )
+            }
         </div>
-        <div className="max-w-[45.125rem] w-[40%] flex flex-col items-center">
+        <div className="max-w-[45.125rem] w-[40%] flex flex-col px-4 items-center">
             <div className="flex items-center gap-x-2">
                 <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
                     <Icon size={16} name="shuffle" />
