@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 
 function SongItem({ item }) {
   const dispatch = useDispatch();
-  const { current } = useSelector(state => state.player)
+  const { current, playing, controls } = useSelector(state => state.player)
 
     const imageStyle = item => {
         switch(item.type) {
@@ -19,8 +19,18 @@ function SongItem({ item }) {
       }
 
     const updateCurrent = () => {
-      dispatch(setCurrent(item));
+      if(current.id === item.id) {
+        if(playing) {
+          controls.pause()
+        } else {
+          controls.play()
+        }
+      } else {
+        dispatch(setCurrent(item));
+      }
     }
+
+    const isCurrentItem = (current?.id === item.id && playing)
 
   return (
     <NavLink key={item.id} to="/" className={"bg-footer p-4 rounded hover:bg-active group"}>
@@ -28,8 +38,8 @@ function SongItem({ item }) {
             <img src={item.image} className={`absolute inset-0 object-cover w-full h-full ${imageStyle(item)}`} />
             <button 
               onClick={updateCurrent}
-              className="w-10 h-10 rounded-full bg-primary absolute bottom-2 right-2 group-hover:flex group-focus:flex items-center justify-center hidden">
-            <Icon name={current?.id === item.id ? 'pause' : 'play'} size={16} />
+              className={`w-10 h-10 rounded-full bg-primary absolute bottom-2 right-2 group-hover:flex group-focus:flex items-center justify-center ${!isCurrentItem ? "hidden" : "flex"}`}>
+            <Icon name={isCurrentItem ? 'pause' : 'play'} size={16} />
             </button>
         </div>
         <h6 className="overflow-hidden overflow-ellipsis whitespace-nowrap text-base font-semibold">{item.title}</h6>

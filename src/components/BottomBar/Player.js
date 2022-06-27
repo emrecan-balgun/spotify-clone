@@ -4,7 +4,7 @@ import { useAudio } from "react-use";
 import { secondsToTime } from "utils";
 import CustomRange from "../CustomRange";
 import { useDispatch, useSelector } from 'react-redux';
-import { setControls, setSidebar } from "app/player";
+import { setControls, setPlaying, setSidebar } from "app/player";
 
 
 function Player() {
@@ -18,6 +18,10 @@ function Player() {
     useEffect(() => {
         controls.play()
     }, [current])
+
+    useEffect(() => {
+        dispatch(setPlaying(state.playing))
+    }, [state.playing])
 
     useEffect(() => {
         dispatch(setControls(controls))
