@@ -263,6 +263,7 @@ const Icon = ({ name, size = 24 }) => {
         collectionActive: CollectionActiveIcon,
         plus: PlusIcon,
         heart: HeartIcon,
+        heartFilled: HeartFilledIcon,
         download: DownloadIcon,
         prev: PrevIcon,
         next: NextIcon,
