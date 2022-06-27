@@ -1,14 +1,27 @@
-import { useMemo } from "react";
+import { useEffect, useMemo } from "react";
 import { Icon } from "Icons";
 import { useAudio } from "react-use";
 import { secondsToTime } from "utils";
 import CustomRange from "../CustomRange";
+import { useDispatch, useSelector } from 'react-redux';
+import { setControls } from "app/player";
+
 
 function Player() {
+    const dispatch = useDispatch();
+    const { current } = useSelector(state => state.player);
+
     const [audio, state, controls, ref] = useAudio({
-        src: 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3',
-        autoPlay: true,
+        src: current?.src,
     });
+
+    useEffect(() => {
+        controls.play()
+    }, [current])
+
+    useEffect(() => {
+        dispatch(setControls(controls))
+    }, [])
 
     const volumeIcon = useMemo(() => {
         if(state.volume === 0 || state.muted)
