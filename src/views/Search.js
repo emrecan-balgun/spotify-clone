@@ -6,31 +6,9 @@ import { Icon } from 'Icons';
 import ScrollContainer from 'react-indiana-drag-scroll'
 import { useEffect, useState, useRef } from 'react';
 
-function Category({ category }) {
-  return (
-    <div style={{'background': category.color}} className="rounded-md before:pt-[100%] before:block relative">
-      <div className="absolute inset-0 overflow-hidden">
-        <h3 className="p-4 text-2xl tracking-tighter font-semibold">
-          {category.title}
-        </h3>
-        <img src={category.cover} className="shadow-spotify w-[6.25rem] h-[6.25rem] rotate-[25deg] translate-x-[18%] translate-y-[-2%] absolute bottom-0 right-0"/>
-      </div>
-    </div>
-  )
-}
+import CategoryItem from '../components/CategoryItem';
+import WideCategoryItem from '../components/WideCategoryItem';
 
-function WideCategory({ category }) {
-  return (
-    <div style={{'background': category.color}} className="rounded-lg relative w-[27.35rem] h-[13.75rem]">
-      <div className="absolute flex-shrink-0 inset-0 overflow-hidden">
-        <h3 className="p-4 text-[2.5rem] tracking-tighter font-semibold">
-          {category.title}
-        </h3>
-        <img src={category.cover} className="shadow-spotify w-32 h-32 rotate-[25deg] translate-x-[18%] translate-y-[-2%] absolute bottom-0 right-0"/>
-      </div>
-    </div>
-  )
-}
 
 function Search() {
   const favoritesRef = useRef();
@@ -83,7 +61,7 @@ function Search() {
           }
           <ScrollContainer innerRef={favorites} className="flex scrollable overflow-x gap-x-6">
             { 
-              favorites.map((category, index) => <WideCategory key={index} category={category} />)
+              favorites.map((category, index) => <WideCategoryItem key={index} category={category} />)
             }
           </ScrollContainer>
         </div>
@@ -92,7 +70,7 @@ function Search() {
         <Title title="Hepsine göz at" />
           <div className="grid grid-cols-5 gap-6">
             {
-              categories.map((category, index) => <Category key={index} category={category} />)
+              categories.map((category, index) => <CategoryItem key={index} category={category} />)
             }
           </div>
       </section>
