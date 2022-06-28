@@ -592,6 +592,14 @@ html,  body,  #root {
   right: 0.5rem;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
 .top-1 {
   top: 0.25rem;
 }
@@ -602,10 +610,6 @@ html,  body,  #root {
 
 .top-full {
   top: 100%;
-}
-
-.right-0 {
-  right: 0px;
 }
 
 .top-0 {
@@ -653,10 +657,6 @@ html,  body,  #root {
   margin-right: 0.5rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mr-auto {
   margin-right: auto;
 }
@@ -665,8 +665,8 @@ html,  body,  #root {
   margin-left: 1rem;
 }
 
-.ml-12 {
-  margin-left: 3rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .flex {
@@ -713,6 +713,10 @@ html,  body,  #root {
   height: 100%;
 }
 
+.h-\[6\.25rem\] {
+  height: 6.25rem;
+}
+
 .h-14 {
   height: 3.5rem;
 }
@@ -741,6 +745,10 @@ html,  body,  #root {
   width: 2.5rem;
 }
 
+.w-\[6\.25rem\] {
+  width: 6.25rem;
+}
+
 .w-\[30\%\] {
   width: 30%;
 }
@@ -765,12 +773,12 @@ html,  body,  #root {
   width: 12rem;
 }
 
-.w-\[22\.75rem\] {
-  width: 22.75rem;
-}
-
 .w-12 {
   width: 3rem;
+}
+
+.w-\[22\.75rem\] {
+  width: 22.75rem;
 }
 
 .min-w-\[11\.25rem\] {
@@ -793,8 +801,26 @@ html,  body,  #root {
   flex-shrink: 0;
 }
 
+.translate-x-\[18\%\] {
+  --tw-translate-x: 18%;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.translate-y-\[-2\%\] {
+  --tw-translate-y: -2%;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .translate-y-2 {
   --tw-translate-y: 0.5rem;
+  -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+          transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.rotate-\[25deg\] {
+  --tw-rotate: 25deg;
   -webkit-transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
           transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -839,6 +865,10 @@ html,  body,  #root {
 
 .justify-between {
   justify-content: space-between;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .gap-x-6 {
@@ -1086,6 +1116,10 @@ html,  body,  #root {
   letter-spacing: 0.05em;
 }
 
+.tracking-tighter {
+  letter-spacing: -0.05em;
+}
+
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -1105,16 +1139,6 @@ html,  body,  #root {
   --tw-text-opacity: 0.7;
 }
 
-.placeholder-black::-webkit-input-placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-placeholder-opacity));
-}
-
-.placeholder-black::placeholder {
-  --tw-placeholder-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-placeholder-opacity));
-}
-
 .placeholder-black\/50::-webkit-input-placeholder {
   color: rgb(0 0 0 / 0.5);
 }
@@ -1129,6 +1153,12 @@ html,  body,  #root {
 
 .opacity-70 {
   opacity: 0.7;
+}
+
+.shadow-spotify {
+  --tw-shadow: 0 2px 4px 0 rgb( 0 0 0 / 20%);
+  --tw-shadow-colored: 0 2px 4px 0 var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .outline-none {
@@ -1148,6 +1178,16 @@ html,  body,  #root {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
+}
+
+.before\:block::before {
+  content: var(--tw-content);
+  display: block;
+}
+
+.before\:pt-\[100\%\]::before {
+  content: var(--tw-content);
+  padding-top: 100%;
 }
 
 .hover\:scale-\[1\.06\]:hover {
