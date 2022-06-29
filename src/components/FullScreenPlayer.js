@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { Icon } from "Icons";
 import { secondsToTime } from "utils";
@@ -8,16 +7,27 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
     const { current } = useSelector(state => state.player)
 
   return (
-    <div className="h-full relative">
+    <div className="h-full relative" onClick={controls[state?.playing ? 'pause' : 'play']}>
         <div className="absolute inset-0 object-cover bg-center bg-cover blur-md opacity-30" style={{ backgroundImage: `url(${current.image})`}} />
-        <div className="absolute left-8 bottom-36 flex items-center gap-x-4">
-            <img className="w-24 h-24 object-cover" src={current.image} alt="" />
-            <div>
-                <h3>{current.title}</h3>
-                <p>{current.description}</p>
+        <div className="absolute top-8 opacity-70 left-8 gap-x-4 text-white flex items-center">
+            <Icon name="logo" size={34} />
+            <div className="text-xs">
+                <p className="uppercase" style={{ fontSize: 11}}>Playing from playlist</p>
+                <h6 className="font-semibold mt-0.5">{current.title}</h6>
             </div>
         </div>
-        <div className="w-full absolute bottom-4 flex flex-col px-8 items-center">
+        <div className="absolute left-8 bottom-36 flex items-center gap-x-5">
+            <img className="w-24 h-24 object-cover" src={current.image} alt="" />
+            <div className="self-end">
+                <h3 className="text-3xl font-bold">{current.title}</h3>
+                <p className="text-sm font-medium opacity-50">{current.description}</p>
+            </div>
+        </div>
+        <div 
+            onClick={e => {
+            e.stopPropagation()
+            }} 
+            className="w-full absolute bottom-4 flex flex-col px-8 items-center">
             <div className="w-full flex items-center mb-1.5 gap-x-2">
                 <div className="text-[0.688rem] text-white text-opacity-70">
                     {
