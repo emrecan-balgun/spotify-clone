@@ -9,7 +9,14 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
 
   return (
     <div className="h-full relative">
-        <div className="absolute inset-0 object-cover bg-center bg-cover blur-md opacity-30" style={{ backgroundImage: `url(${current.image})`}}></div>
+        <div className="absolute inset-0 object-cover bg-center bg-cover blur-md opacity-30" style={{ backgroundImage: `url(${current.image})`}} />
+        <div className="absolute left-8 bottom-36 flex items-center gap-x-4">
+            <img className="w-24 h-24 object-cover" src={current.image} alt="" />
+            <div>
+                <h3>{current.title}</h3>
+                <p>{current.description}</p>
+            </div>
+        </div>
         <div className="w-full absolute bottom-4 flex flex-col px-8 items-center">
             <div className="w-full flex items-center mb-1.5 gap-x-2">
                 <div className="text-[0.688rem] text-white text-opacity-70">
@@ -74,7 +81,7 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
                         <Icon size={24} name="fullScreenOff" />
                     </button>
                 </div>
-            </div>
+        </div>
     </div>
   )
 }
