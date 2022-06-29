@@ -669,6 +669,11 @@ html,  body,  #root {
   margin-right: 1.5rem;
 }
 
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .mb-7 {
   margin-bottom: 1.75rem;
 }

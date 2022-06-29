@@ -30,9 +30,7 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
                     }
                 </div>
             </div>
-            <div className="flex justify-between items-center w-full">
-                <div>sol</div>
-                <div className="flex items-center gap-x-4">
+                <div className="flex items-center gap-x-5">
                     <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
                         <Icon size={24} name="shuffle" />
                     </button>
@@ -51,7 +49,7 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
                         <Icon size={24} name="repeat" />
                     </button>
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center absolute bottom-3 right-6 gap-x-3">
                     <button 
                         onClick={controls[state.muted ? 'unmute' : 'mute']}
                         className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100">
@@ -69,12 +67,14 @@ function FullScreenPlayer({ toggle, state, controls, volumeIcon }) {
                                 }}
                         />
                     </div>
-                        <button className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"> 
-                        <Icon size={16} name="fullScreen" />
+                        <button 
+                            className="w-8 h-8 flex items-center justify-center text-white text-opacity-70 hover:text-opacity-100"
+                            onClick={toggle}
+                            > 
+                        <Icon size={24} name="fullScreenOff" />
                     </button>
                 </div>
             </div>
-        </div>
     </div>
   )
 }
