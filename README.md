@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Live
+[Link](https://62bc2804a712fc164ac7d686--emron-spotify-clone.netlify.app)
+
 ## Available Scripts
 
 In the project directory, you can run:
