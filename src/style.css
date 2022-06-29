@@ -640,6 +640,26 @@ html,  body,  #root {
   bottom: 1rem;
 }
 
+.top-8 {
+  top: 2rem;
+}
+
+.left-8 {
+  left: 2rem;
+}
+
+.bottom-36 {
+  bottom: 9rem;
+}
+
+.bottom-3 {
+  bottom: 0.75rem;
+}
+
+.right-6 {
+  right: 1.5rem;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -703,6 +723,14 @@ html,  body,  #root {
 
 .mb-1 {
   margin-bottom: 0.25rem;
+}
+
+.mt-0\.5 {
+  margin-top: 0.125rem;
+}
+
+.mt-0 {
+  margin-top: 0px;
 }
 
 .flex {
@@ -845,6 +873,10 @@ html,  body,  #root {
   width: 4rem;
 }
 
+.w-24 {
+  width: 6rem;
+}
+
 .min-w-\[11\.25rem\] {
   min-width: 11.25rem;
 }
@@ -962,6 +994,20 @@ html,  body,  #root {
 .gap-x-4 {
   -webkit-column-gap: 1rem;
           column-gap: 1rem;
+}
+
+.gap-x-5 {
+  -webkit-column-gap: 1.25rem;
+          column-gap: 1.25rem;
+}
+
+.gap-x-3 {
+  -webkit-column-gap: 0.75rem;
+          column-gap: 0.75rem;
+}
+
+.self-end {
+  align-self: flex-end;
 }
 
 .self-center {
@@ -1195,12 +1241,21 @@ html,  body,  #root {
   font-size: 0.813rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
 .font-semibold {
   font-weight: 600;
 }
 
 .font-medium {
   font-weight: 500;
+}
+
+.font-bold {
+  font-weight: 700;
 }
 
 .uppercase {
@@ -1256,6 +1311,10 @@ html,  body,  #root {
 
 .opacity-30 {
   opacity: 0.3;
+}
+
+.opacity-50 {
+  opacity: 0.5;
 }
 
 .shadow-spotify {
